@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbra's Playground</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Barbra's Playground</h1>
+        <p>Explore interactive elements and event handling</p>
+    </header>
+
+    <main>
+        <!-- Event Handling Section -->
+        <section class="card">
+            <h2>Event Handling</h2>
+            
+            <div class="event-box" id="click-box">
+                <button id="click-btn">Click Me!</button>
+                <p id="click-output">Waiting for click...</p>
+            </div>
+
+            <div class="event-box" id="hover-box">
+                <div id="hover-target">Hover Over Me!</div>
+                <p id="hover-output">Waiting for hover...</p>
+            </div>
+
+            <div class="event-box">
+                <input type="text" id="keypress-input" placeholder="Type something...">
+                <p id="keypress-output">Waiting for keypress...</p>
+            </div>
+
+            <div class="event-box secret-box">
+                <div id="secret-target">🤫 Double-click for a secret!</div>
+                <p id="secret-output"></p>
+            </div>
+        </section>
+
+        <!-- Interactive Elements Section -->
+        <section class="card">
+            <h2>Interactive Elements</h2>
+            
+            <div class="color-changer">
+                <button id="color-btn">Change Color</button>
+                <div id="color-target"></div>
+            </div>
+
+            <div class="gallery">
+                <h3>Image Gallery</h3>
+                <div class="gallery-container">
+                    <img src="https://picsum.photos/id/237/400/300" alt="Gallery image" class="active">
+                    <img src="https://picsum.photos/id/238/400/300" alt="Gallery image">
+                    <img src="https://picsum.photos/id/239/400/300" alt="Gallery image">
+                </div>
+                <div class="gallery-controls">
+                    <button id="prev-btn">Previous</button>
+                    <button id="next-btn">Next</button>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <h3>FAQ Accordion</h3>
+                <div class="accordion-item">
+                    <button class="accordion-btn">What is JavaScript?<span>+</span></button>
+                    <div class="accordion-content">
+                        <p>JavaScript is a programming language that enables interactive web pages.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-btn">What are events?<span>+</span></button>
+                    <div class="accordion-content">
+                        <p>Events are actions that happen in the browser that JavaScript can respond to.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Form Validation Section -->
+        <section class="card">
+            <h2>Form Validation</h2>
+            <form id="signup-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                    <span class="error-message" id="name-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                    <span class="error-message" id="email-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" required minlength="8">
+                    <span class="error-message" id="password-error"></span>
+                    <div class="password-rules">
+                        <p>Password must contain:</p>
+                        <ul>
+                            <li id="length-rule">At least 8 characters</li>
+                            <li id="number-rule">At least 1 number</li>
+                            <li id="special-rule">At least 1 special character</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <button type="submit">Sign Up</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
